@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán Học Phí - VAA English</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body class="bg-light py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Cột thông tin đăng ký -->
+            <div class="col-lg-8">
+                <div class="card shadow-sm border-0 rounded-4 p-4 bg-white">
+                    <h4 class="fw-bold mb-3"><i class="bi bi-credit-card-2-front text-primary me-2"></i>Xác Nhận Đăng Ký
+                        Khóa Học</h4>
+                    <hr>
+                    <div class="d-flex align-items-center mb-4 p-3 bg-light rounded-3">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=150&q=80"
+                            class="rounded me-3" style="width: 110px; height: 80px; object-fit: cover;" alt="Course">
+                        <div>
+                            <h5 class="fw-bold mb-1">Luyện Thi IELTS 6.5+ Tổng Quát</h5>
+                            <p class="text-muted small mb-0"><i class="bi bi-clock me-1"></i> Thời lượng: 2.5 tháng (36
+                                buổi)</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Họ tên người đăng ký</label>
+                        <input type="text" class="form-control" value="Văn Thái Sơn" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Phương thức thanh toán</label>
+                        <select class="form-select" id="payMethod" onchange="toggleQR()">
+                            <option value="transfer">Chuyển khoản ngân hàng (Quét mã QR)</option>
+                            <option value="cash">Thanh toán trực tiếp tại văn phòng trung tâm</option>
+                        </select>
+                    </div>
+                    <!-- Khung quét QR -->
+                    <div id="qrContainer" class="text-center p-4 border rounded-3 bg-white mb-3">
+                        <p class="fw-semibold text-secondary mb-2">Quét mã QR bằng ứng dụng ngân hàng hoặc ví điện tử
+                        </p>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=VAA-ENGLISH-CHECKOUT-COURSE"
+                            alt="QR Code" class="img-fluid border p-2 rounded bg-light">
+                        <p class="small text-danger mt-2 mb-0 fw-semibold">Nội dung chuyển khoản: <span
+                                class="text-dark">HOCVIEN_SDT_THANHTOAN</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Cột tổng tiền và xác nhận -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm border-0 rounded-4 p-4 bg-white">
+                    <h5 class="fw-bold mb-3">Tổng Hóa Đơn</h5>
+                    <div class="d-flex justify-content-between mb-2 text-muted small"><span>Học phí
+                            gốc:</span><span>6,500,000 đ</span></div>
+                    <div class="d-flex justify-content-between mb-3 text-muted small"><span>Ưu đãi học
+                            bổng:</span><span>0 đ</span></div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-4 fs-5 fw-bold text-danger"><span>Tổng
+                            cộng:</span><span>6,500,000 đ</span></div>
+                    <button class="btn btn-success w-100 py-2 fw-bold shadow-sm mb-2"
+                        onclick="alert('Thanh toán thành công! Hệ thống đã ghi nhận học phí của bạn.'); window.location.href='home-public.html';">
+                        <i class="bi bi-shield-check me-1"></i> Hoàn Tất Thanh Toán
+                    </button>
+                    <a href="home-public.html" class="btn btn-outline-secondary w-100 py-2 fw-semibold">Hủy / Quay
+                        lại</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleQR() {
+            let method = document.getElementById('payMethod').value;
+            let qrContainer = document.getElementById('qrContainer');
+            qrContainer.style.display = (method === 'transfer') ? 'block' : 'none';
+        }
+    </script>
+</body>
+
+</html>

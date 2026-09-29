@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAA English - Học Viện Ngoại Ngữ Hàng Không</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .hero-banner {
+            background: linear-gradient(135deg, rgba(13, 110, 253, 0.85), rgba(30, 41, 59, 0.9)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            padding: 120px 0;
+        }
+
+        .course-card {
+            transition: transform 0.3s ease, shadow 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-img {
+            height: 210px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Thanh Điều Hướng (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="home-public.html">
+                <i class="bi bi-airplane-engines me-2"></i>VAA ENGLISH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active px-3" href="home-public.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="course-list.html">Khóa Học</a></li>
+                    <li class="nav-item ms-lg-3 my-2 my-lg-0">
+                        <a class="btn btn-outline-light btn-sm px-4 me-2" href="login.html"><i
+                                class="bi bi-box-arrow-in-right me-1"></i> Đăng Nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary btn-sm px-4" href="register.html"><i
+                                class="bi bi-person-plus me-1"></i> Đăng Ký</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="hero-banner text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-semibold">Đào tạo ngoại ngữ
+                        chuyên sâu chuẩn quốc tế</span>
+                    <h1 class="display-4 fw-bold mb-3">Chinh Phục Thế Giới Cùng VAA English</h1>
+                    <p class="lead mb-4 text-white-50">Hệ thống quản lý và học tập ngoại ngữ hàng đầu, đặc quyền định
+                        hướng ngành dịch vụ và hàng không với đội ngũ giảng viên bản xứ.</p>
+                    <a href="course-list.html" class="btn btn-primary btn-lg px-4 me-3 fw-semibold shadow">Khám Phá Khóa
+                        Học</a>
+                    <a href="register.html" class="btn btn-outline-light btn-lg px-4 fw-semibold">Tạo Tài Khoản</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Danh Sách Khóa Học Nổi Bật -->
+    <section class="container my-5 py-4">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Khóa Học Phổ Biến Nhất</h2>
+            <p class="text-muted">Lựa chọn lộ trình học tập phù hợp nhất với mục tiêu cá nhân của bạn</p>
+        </div>
+        <div class="row g-4">
+            <!-- Khóa 1 -->
+            <div class="col-md-4">
+                <div class="card course-card h-100 border-0 bg-white">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top course-img" alt="IELTS">
+                    <div class="card-body d-flex flex-column p-4">
+                        <span class="badge bg-primary-subtle text-primary mb-2 align-self-start fw-semibold">Cấp
+                            Tốc</span>
+                        <h5 class="card-title fw-bold">Luyện Thi IELTS 6.5+ Tổng Quát</h5>
+                        <p class="card-text text-muted small flex-grow-1">Cam kết đầu ra chuẩn 4 kỹ năng, phát triển
+                            phản xạ tự nhiên và chiến lược làm bài tối ưu.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <span class="text-danger fw-bold fs-5">6,500,000 đ</span>
+                            <a href="checkout.html" class="btn btn-outline-primary btn-sm px-3 fw-semibold">Đăng Ký
+                                Ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Khóa 2 -->
+            <div class="col-md-4">
+                <div class="card course-card h-100 border-0 bg-white">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top course-img" alt="Giao tiếp">
+                    <div class="card-body d-flex flex-column p-4">
+                        <span class="badge bg-success-subtle text-success mb-2 align-self-start fw-semibold">Phổ
+                            Biến</span>
+                        <h5 class="card-title fw-bold">Tiếng Anh Giao Tiếp Văn Phòng</h5>
+                        <p class="card-text text-muted small flex-grow-1">Thành thạo kỹ năng phỏng vấn, viết email
+                            chuyên nghiệp, thuyết trình và đàm phán quốc tế.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <span class="text-danger fw-bold fs-5">4,500,000 đ</span>
+                            <a href="checkout.html" class="btn btn-outline-primary btn-sm px-3 fw-semibold">Đăng Ký
+                                Ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Khóa 3 -->
+            <div class="col-md-4">
+                <div class="card course-card h-100 border-0 bg-white">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top course-img" alt="Hàng không">
+                    <div class="card-body d-flex flex-column p-4">
+                        <span
+                            class="badge bg-warning-subtle text-warning-emphasis mb-2 align-self-start fw-semibold">Chuyên
+                            Ngành</span>
+                        <h5 class="card-title fw-bold">Tiếng Anh Ngành Hàng Không</h5>
+                        <p class="card-text text-muted small flex-grow-1">Đào tạo chuyên biệt từ vựng phát thanh vô
+                            tuyến, xử lý tình huống khẩn nguy và dịch vụ bay.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <span class="text-danger fw-bold fs-5">8,000,000 đ</span>
+                            <a href="checkout.html" class="btn btn-outline-primary btn-sm px-3 fw-semibold">Đăng Ký
+                                Ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-1 fw-semibold">&copy; 2026 Học Viện Ngoại Ngữ VAA English</p>
+            <p class="text-white-50 small mb-0">Hệ thống quản lý học tập phục vụ đồ án Lập Trình Web.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
